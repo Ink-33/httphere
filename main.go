@@ -23,10 +23,8 @@ func main() {
 }
 
 func (h *loghandlers) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
-
 	log.Printf("%s\trequest\t%s\n", req.RemoteAddr, req.URL)
 	for i := range h.funcs {
 		h.funcs[i].ServeHTTP(resp, req)
 	}
-
 }
