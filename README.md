@@ -1,1 +1,3 @@
 # httphere
+
+Usage: `httphere`
